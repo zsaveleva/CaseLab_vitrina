@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script type="text/javascript"
+        src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ig_RcxMzbbd4cRex8NJL799lQDlCJaKF_7Imf_amsBf6nCYjdOz5ypQ8fDYD-NnLTrQas8CGdPEkDciXA1QQqLm1hJdBwc6eR2CKY_NQZQHr2L54_sYVPyR8IfMZ2LGAeqMnZi5clUvdJvvT3J67E5z2S82ugFYF0P7oju4rn8thxGsNi1syocqQVXhGyQ97hiHmEeAOLzzzfd4uk4eJ80w38y4uk24zHmakz9L1asp0zrMicuh4-x-QzCWDPsowBm8QxBgAnGbn6u0LJn4X2llSyrtLviPgva8ezEjGW9GMm4tRBzT7_n8C55EODN7rcyJzLoTJ9HFWojXC-sX1FdDGIy-8urfrehBlm8QuQY3SCkjAA4rUlXiCGICtb3IJf_DWTaFDLcaO1TtkRQzKurnQ3IqEXhIrfTvlZdq0DWBvdtEOniaPsGgYp5fPGLhlKWCDeKo1p7EXTZV65P7bx7q53lzATbsekA2yCIX0u0HLb7x0pRJfHEWuAjZWZvW0t7QQ5Jv4AAkt96nlog49_Ca19xGGgPCiw6k32HAxim5yYfXlvbs_m5GYcczLLAVXItfSW_AudUB6W7uOwzq8ueNTFDL3dKOzfEpmTVUthSGGD1OeXdI9N_If2pkRr6FRaPOVaZl0ANSDy-DMiLlBFg"
+        charset="UTF-8"></script>
+    <style>
+        :root {
+            color: #222;
+            font-family: Arial;
+        }
+
+        .shop {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        .product h2 {
+            margin: 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #eee;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        #basket-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            margin: auto;
+        }
+
+        li {
+            text-decoration: underline;
+            line-height: 1.8;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shop">
+        <div class="product">
+            <h2>Lenovo Yoga</h2>
+            <p>Price: <span class="price">3000</span></p>
+            <button onclick="addToBasket(1)">Buy</button>
+        </div>
+        <div class="product">
+            <h2>Acer Aspire</h2>
+            <p>Price: <span class="price">1800</span></p>
+            <button onclick="addToBasket(2)">Buy</button>
+        </div>
+        <div class="product">
+            <h2>Dell Vostro</h2>
+            <p>Price: <span class="price">3400</span></p>
+            <button onclick="addToBasket(3)">Buy</button>
+        </div>
+    </div>
+    <hr>
+    <div class="basket">
+        <h2 style="text-align: center;">Cart</h2>
+        <ul id="basket-items"></ul>
+        <h3 style="text-align: center;">Total price: <span id="total">0</span></h3>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
